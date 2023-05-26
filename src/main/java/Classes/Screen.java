@@ -1,11 +1,14 @@
 package Classes;
 
+import javax.imageio.plugins.jpeg.JPEGImageReadParam;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Screen extends JFrame implements ActionListener {
+
+    JTextField texto;
     public Screen(){
 
         setVisible(true);
@@ -35,7 +38,7 @@ public class Screen extends JFrame implements ActionListener {
         terceiroBotao.setFont(new Font("Arial", Font.BOLD, 40));
         terceiroBotao.setForeground(new Color(0xB388DD));
         terceiroBotao.setBackground(new Color(0x000000));
-        terceiroBotao.setText("C4lique no botão de Lucas");
+        terceiroBotao.setText("Clique no botão de Lucas");
         add(primeiroBotao);
         add(segundoBotao);
         add(terceiroBotao);
@@ -52,7 +55,8 @@ public class Screen extends JFrame implements ActionListener {
     }
 
     private void teste(ActionEvent actionEvent) {
-         JFrame novaTela = new JFrame();
+         JFrame novaTela = new JFrame("Emprestimo de livros");
+         novaTela.setSize(800,500);
          novaTela.setVisible(true);
 
     }
